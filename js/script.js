@@ -1,19 +1,28 @@
-function pesan() {
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const tipeGitar = document.getElementById("tipeGitar");
-    const jumlah = document.getElementById("jumlah");
-    if (name !== null)
-        if (email !== null)
-            if (tipeGitar !== null)
-                if (jumlah !== null)
-                    alert("Berhasil. Silahkan menunggu^^");
-                else
-                    alert("Gagal. Silahkan masukkan jumlah pemesanan");
-            else
-                alert("Gagal. Silahkan masukkan tipe gitar");
-        else
-            alert("Gagal. Silahkan masukkan email");
+// function ================================================================================================== 
+function getTimeOfDay() {
+    const hour = new Date().getHours();
+    
+    if (hour >= 5 && hour < 12)
+        return "Pagi";
+    else if (hour >= 12 && hour < 17)
+        return "Siang";
+    else if (hour >= 17 && hour < 20)
+        return "Sore";
     else
-        alert("Gagal. Silahkan masukkan nama");
+        return "Malam";    
 }
+
+function getCurrentDate() {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const currentDate = new Date();
+    return currentDate.toLocaleDateString('id-ID', options);
+}
+
+// showing  ==================================================================================================
+const timeOfDay = getTimeOfDay();
+document.getElementById('waktu').innerText = `Selamat ${timeOfDay}!`;
+document.getElementById('date').innerText = getCurrentDate();
+
+
+
+
