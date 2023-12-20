@@ -6,13 +6,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.content-center {
-    margin-left: auto;
-    margin-right: auto;
-    width: 980px;
-    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
 }
 
 .header {
@@ -23,6 +19,26 @@ body {
     padding: 4em;
     text-align: center;
     height: 150px;
+}
+
+.content {
+    flex: 1;
+    padding: 1em;
+}
+
+.footer {
+    background-color: #843d11;
+    color: white;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    width: 980px;
+}
+.content-center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+    background-color: #FFF;
 }
 
 .menu {
@@ -56,20 +72,9 @@ a {
     background-color: #5c1304;
 }
 
-.content {
-    padding: 1em;
-}
 
 .title {}
 
-.footer {
-    background-color: #843d11;
-    color: white;
-    text-align: center;
-    padding-bottom: 0.5em;
-    padding-top: 0.5em;
-    width: 980px;
-}
 
 .img-left {
     width: 250px;
@@ -172,6 +177,7 @@ select {
 .copyright-text {
     text-align: center;
     font-size: 13px;
+    margin: 0px;
 }
 
 .kontak {
